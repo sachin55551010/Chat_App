@@ -7,7 +7,7 @@ import { createSocket, disconnectSocket } from "../api/socket";
 export const authApi = createApi({
   reducerPath: "auth_api",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${import.meta.env.VITE_BACKEND_URL}/auth`,
+    baseUrl: `${import.meta.env.VITE_BACKEND_URL}/auth`, //backend url
     credentials: "include",
   }),
   tagTypes: ["Auth"],
