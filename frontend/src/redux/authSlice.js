@@ -6,6 +6,7 @@ const authSlice = createSlice({
     authUser: null,
     socket: null,
     isPreviewImg: false,
+    onlineUser: [],
   },
   reducers: {
     setAuthUser: (state, action) => {

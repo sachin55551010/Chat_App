@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL, process.env.FRONTEND_PRODUCTION_URL],
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   }),
 );
@@ -38,6 +38,7 @@ export function getReceiverSocketId(userId) {
   return socketUserMap[userId];
 }
 const socketUserMap = {};
+
 io.on("connection", (socket) => {
   const userId = socket.handshake.query.userId;
   if (userId) socketUserMap[userId] = socket.id;

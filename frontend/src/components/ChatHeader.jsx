@@ -1,7 +1,7 @@
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useGetUserQuery } from "../redux/messageApi";
 import { NavLink, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setIsPreview } from "../redux/authSlice";
 export const ChatHeader = () => {
   const { id } = useParams();
@@ -22,7 +22,7 @@ export const ChatHeader = () => {
           />
           <div>
             <h1 className="font-bold text-sm">{user_name}</h1>
-            <span className="text-sm">Online</span>
+            <span className="text-sm"></span>
           </div>
         </div>
 

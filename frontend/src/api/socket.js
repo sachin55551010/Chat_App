@@ -7,6 +7,7 @@ export const createSocket = (userId) => {
       withCredentials: true,
     });
   }
+
   return socket;
 };
 export const disconnectSocket = () => {

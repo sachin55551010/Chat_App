@@ -24,7 +24,10 @@ export const Messages = ({ id }) => {
     }
   }, [messages]);
   return (
-    <div className="max-h-[calc(100dvh-8rem)] overflow-y-auto">
+    <div
+      ref={chatContainerRef}
+      className="max-h-[calc(100dvh-8rem)] overflow-y-auto"
+    >
       {messages?.map((allMessage) => {
         return (
           <li key={allMessage._id} className="list-none">

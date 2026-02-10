@@ -1,12 +1,11 @@
 import { CgSpinner } from "react-icons/cg";
-import { useGetAllUsersQuery, useGetMessagesQuery } from "../redux/messageApi";
+import { useGetAllUsersQuery } from "../redux/messageApi";
 import { RiSearch2Line } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 import { ChatContainer } from "./ChatContainer";
 import { useState } from "react";
 
 export const UserList = () => {
-  const { data: messages } = useGetMessagesQuery();
   const [isChatSelected, setIsChatSelcected] = useState(null);
   const { data, isLoading } = useGetAllUsersQuery();
 
